@@ -10,7 +10,7 @@
     "repositories": [ { "type": "composer", "url": "http://local.wetawa.com/" } ],
     "require": {
         "php": ">=5.4",
-        "symfony/symfony": "~2.6.0",
+        "symfony/framework-bundle": "~2.6.0",
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "~1.2",
         "twig/extensions": "~1.0",
@@ -19,7 +19,17 @@
         "symfony/monolog-bundle": "~2.4",
         "wepala/distribution-bundle": "dev-master",
         "sensio/framework-extra-bundle": "~3.0",
-        "incenteev/composer-parameter-handler": "~2.0"
+        "incenteev/composer-parameter-handler": "~2.0",
+        "symfony/browser-kit": "~2.3",
+        "symfony/console": "~2.0",
+        "symfony/finder": "~2.0",
+        "symfony/security": "~2.4",
+        "symfony/form": "~2.6@dev",
+        "symfony/class-loader": "~2.1",
+        "symfony/expression-language": "~2.4",
+        "symfony/process": "~2.0",
+        "symfony/validator": "~2.5",
+        "symfony/yaml": "~2.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
