@@ -16,7 +16,7 @@ http://getcomposer.org/ or just run the following command:
 
 Then, use the `create-project` command to generate a new Symfony application:
 
-    php composer.phar create-project wepala/wecms path/to/install
+    php composer.phar create-project wepala/wecms-standard path/to/install
 
 Composer will install WeCMS and all its dependencies under the
 `path/to/install` directory.
@@ -107,9 +107,9 @@ It comes pre-configured with the following bundles:
   * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
     capabilities
 
-  * [**WeAdminBundle**][14] - Adds admin section to symfony project 
+  * [**WeCMSAdminBundle**][14] - Adds admin section to symfony project 
 
-  * [**WeUserBundle**][16] - Adds user management functionality to a project
+  * [**WeCMSUserBundle**][16] - Adds user management functionality to a project
 
 
 All libraries and bundles included in the Symfony Standard Edition are
