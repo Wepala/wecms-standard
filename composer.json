@@ -1,21 +1,37 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "wepala/wecms-standard",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "WeCMS A content management system based on Symfony",
     "autoload": {
         "psr-0": { "": "src/", "SymfonyStandard": "app/" }
     },
+    "repositories": [ 
+        { 
+            "type": "git", 
+            "url": "https://github.com/wepala/wecms-distributionbundle.git"
+        },
+        { 
+            "type": "git", 
+            "url": "https://github.com/wepala/wecms-adminbundle.git"
+        },
+        { 
+            "type": "git", 
+            "url": "https://github.com/wepala/wecms-userbundlee.git"
+        }
+    ],
     "require": {
-        "php": ">=5.3.3",
-        "symfony/symfony": "3.0.x-dev",
+        "php": ">=5.4",
+        "symfony/symfony": "2.6.*",
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "~1.2",
         "twig/extensions": "~1.0",
         "symfony/assetic-bundle": "~2.3",
         "symfony/swiftmailer-bundle": "~2.3",
         "symfony/monolog-bundle": "~2.4",
-        "sensio/distribution-bundle": "~3.0",
+        "wepala/wecms-distributionbundle": "@dev",
+        "wepala/wecms-adminbundle": "1.0.x-dev",
+        "wepala/wecms-userbundle": "1.0.x-dev",
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0"
     },
@@ -28,18 +44,22 @@
         ],
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "WeCMS\\DistributionBundle\\Composer\\ScriptHandler::installAdminBundle",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "WeCMS\\DistributionBundle\\Composer\\ScriptHandler::generateDatabase",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "WeCMS\\DistributionBundle\\Composer\\ScriptHandler::installAdminBundle",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "WeCMS\\DistributionBundle\\Composer\\ScriptHandler::updateDatabase",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
         ]
     },
@@ -54,7 +74,7 @@
             "file": "app/config/parameters.yml"
         },
         "branch-alias": {
-            "dev-master": "3.0-dev"
+            "dev-master": "1.0-dev"
         }
     }
 }
