@@ -17,7 +17,7 @@
         "symfony/assetic-bundle": "~2.3",
         "symfony/swiftmailer-bundle": "~2.3",
         "symfony/monolog-bundle": "~2.4",
-        "wepala/distribution-bundle": "dev-master",
+        "wepala/wecms-distributionbundle": "@dev",
         "wepala/wecms-adminbundle": "@dev",
         "wepala/wecms-userbundle": "@dev",
         "sensio/framework-extra-bundle": "~3.0",
@@ -32,7 +32,7 @@
         ],
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAdminBundle",
+            "WeCMS\\DistributionBundle\\Composer\\ScriptHandler::installAdminBundle",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
@@ -41,7 +41,7 @@
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAdminBundle",
+            "WeCMS\\DistributionBundle\\Composer\\ScriptHandler::installAdminBundle",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
