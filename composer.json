@@ -17,8 +17,8 @@
         "symfony/swiftmailer-bundle": "~2.3",
         "symfony/monolog-bundle": "~2.4",
         "wepala/wecms-distributionbundle": "@dev",
-        "wepala/wecms-adminbundle": "1.0@dev",
-        "wepala/wecms-userbundle": "1.0@dev",
+        "wepala/wecms-adminbundle": "1.0.x-dev",
+        "wepala/wecms-userbundle": "1.0.x-dev",
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0"
     },
