@@ -17,7 +17,7 @@
         },
         { 
             "type": "git", 
-            "url": "https://github.com/wepala/wecms-userbundlee.git"
+            "url": "https://github.com/wepala/wecms-userbundle.git"
         }
     ],
     "require": {
