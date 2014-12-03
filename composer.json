@@ -2,7 +2,6 @@
     "name": "wepala/wecms-standard",
     "license": "MIT",
     "type": "project",
-    "version" : "1.0.0",
     "description": "WeCMS A content management system based on Symfony",
     "autoload": {
         "psr-0": { "": "src/", "SymfonyStandard": "app/" }
@@ -62,7 +61,7 @@
             "file": "app/config/parameters.yml"
         },
         "branch-alias": {
-            "dev-master": "master"
+            "dev-master": "1.0-dev"
         }
     }
 }
